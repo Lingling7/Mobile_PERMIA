@@ -128,37 +128,7 @@
 
 			        $response = @file_get_contents($request, 0, $context);
 
-			        $jsonobj = json_decode($response);
-					
-					
-					
-/*
-					
-					$accountKey = '163adcf8de32408e8014a85e2838e6e2';
-
-	        		$ServiceRootURL =  "https://api.cognitive.microsoft.com/bing/v5.0/search";
-	        		
-	        		$WebSearchURL = $ServiceRootURL . '?$format=json&$top=' . $_REQUEST["results"] . '&$skip=' . $_REQUEST["offset"];
-
-
-					$context = stream_context_create(array(
-						'http' => array(
-							'request_fulluri' => true,
-							'header'  => "Ocp-Apim-Subscription-Key: " . $accountKey
-						),
-						'ssl' => array(
-								'verify_peer'      => false,
-								'verify_peer_name' => false,
-							)
-					));
-
-					$request = $WebSearchURL . '?q=' . urlencode( $_REQUEST["searchText"] ) . '&mkt=' . urlencode( $_REQUEST["market"]  ) . '&count=' . $_REQUEST["results"] . '&offset=' . $_REQUEST["offset"] . "&responsefilter=webpages";
-
-					$response = @file_get_contents($request, 0, $context);
-		
-					$jsonobj = json_decode($response);
-	        
-*/	        
+			        $jsonobj = json_decode($response);        
 	        
 	        
 	        
@@ -217,20 +187,21 @@
 					{  // new version 04202019 news
 						if (is_array($jsonobj->value) || is_object($jsonobj->value))
 						{	
-							echo "<br>";
+							// echo "<br>";
+							//sleep(2);
 							if(($_SESSION['interface']) == 'non-blended-vertical')
 							{	
 								if ($_REQUEST["market"]=='en-US') {
-									echo '<button class="collapsibleexpand1">'.'English'.'</button>';
+									echo '<button class="collapsibleexpand active">'.'English'.'</button>';
 									echo '<div class="content">';
 								}elseif ($_REQUEST["market"]=='zh-CN') {
-									echo '<button class="collapsibleexpand2">'.'Chinese(Simplified)'.'</button>';
+									echo '<button class="collapsibleexpand active">'.'中文'.'</button>';
 									echo '<div class="content">';
 								}elseif ($_REQUEST["market"]=='zh-HK') {
-									echo '<button class="collapsibleexpand3">'.'Chinese(Traditional)'.'</button>';
+									echo '<button class="collapsibleexpand active">'.'粵語'.'</button>';
 									echo '<div class="content">';
 								}elseif ($_REQUEST["market"]=='es-ES') {
-									echo '<button class="collapsibleexpand4">'.'Spanish'.'</button>';
+									echo '<button class="collapsibleexpand active">'.'Español'.'</button>';
 									echo '<div class="content">';
 								}
 								// echo "<br>";
@@ -311,9 +282,8 @@
 			}
 		?>
 		<script>//collapseAll Interface
-		    var coll = document.getElementsByClassName("collapsibleexpand1");
+		    var coll = document.getElementsByClassName("collapsibleexpand");
 		    var i;
-
 
 		    for (i = 0; i < coll.length; i++) {
 		    	
@@ -326,73 +296,11 @@
 		                content.style.maxHeight = content.scrollHeight + "px";
 		            }
 		        });
-		        coll[i].classList.toggle("active");
+		        // coll[i].classList.toggle("active");
 		        coll[i].nextElementSibling.style.maxHeight = "2100px";//show 6 news
 		        
 		    }
 		</script>
-		<script>//collapseAll Interface
-		    var coll = document.getElementsByClassName("collapsibleexpand2");
-		    var i;
-
-
-		    for (i = 0; i < coll.length; i++) {
-		    	
-		        coll[i].addEventListener("click", function() {
-		            this.classList.toggle("active");
-		            var content = this.nextElementSibling;
-		            if (content.style.maxHeight){
-		                content.style.maxHeight = null;
-		            } else {
-		                content.style.maxHeight = content.scrollHeight + "px";
-		            }
-		        });
-		        coll[i].classList.toggle("active");
-		        coll[i].nextElementSibling.style.maxHeight = "2100px";//show 6 news
-		        
-		    }
-		</script>
-		<script>//collapseAll Interface
-		    var coll = document.getElementsByClassName("collapsibleexpand3");
-		    var i;
-
-
-		    for (i = 0; i < coll.length; i++) {
-		    	
-		        coll[i].addEventListener("click", function() {
-		            this.classList.toggle("active");
-		            var content = this.nextElementSibling;
-		            if (content.style.maxHeight){
-		                content.style.maxHeight = null;
-		            } else {
-		                content.style.maxHeight = content.scrollHeight + "px";
-		            }
-		        });
-		        coll[i].classList.toggle("active");
-		        coll[i].nextElementSibling.style.maxHeight = "2100px";//show 6 news
-		        
-		    }
-		</script>
-		<script>//collapseAll Interface
-		    var coll = document.getElementsByClassName("collapsibleexpand4");
-		    var i;
-
-
-		    for (i = 0; i < coll.length; i++) {
-		    	
-		        coll[i].addEventListener("click", function() {
-		            this.classList.toggle("active");
-		            var content = this.nextElementSibling;
-		            if (content.style.maxHeight){
-		                content.style.maxHeight = null;
-		            } else {
-		                content.style.maxHeight = content.scrollHeight + "px";
-		            }
-		        });
-		        coll[i].classList.toggle("active");
-		        coll[i].nextElementSibling.style.maxHeight = "2100px";//show 6 news
-		        
-		    }
-		</script>
+		
 	</body>
 </html>

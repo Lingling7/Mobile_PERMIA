@@ -279,24 +279,7 @@
 		<script src="Javascript/jquery-1.11.0.min.js" type="text/javascript"></script>
 		<script src="src/iframeResizer.contentWindow.min.js" type="text/javascript">
 		</script>
-		<script>//collapseAll Interface 1
-		    var coll1 = document.getElementsByClassName("collapsibleexpand1");
-		    var i;
-
-		    for (i = 0; i < coll1.length; i++) {
-		        coll1[i].addEventListener("click", function() {
-		            this.classList.toggle("active");
-		            var content1 = this.nextElementSibling;
-		            if (content1.style.maxHeight){
-		                content1.style.maxHeight = null;
-		            } else {
-		                content1.style.maxHeight = content1.scrollHeight + "px";
-		            }
-		        });
-		        coll1[i].classList.toggle("active");
-		        coll1[i].nextElementSibling.style.maxHeight = "2100px";//show 12 news
-		    }
-	</script>
+		
 		<script type="text/javascript">
 
 			var favoriteBasket = [];
@@ -541,14 +524,15 @@
 				{
 					for( j=0 ; j< <?php echo $number_of_languages?> ; j++)
 					{//split different languages
-						//$("#resultList").append("<div class='separator-text' align='<?php echo $interface_direction_alignment?>'>"+ languageNameArray[j]+"</div>");
-						//$("#resultList").append("<hr class='separator' align='<?php echo $interface_direction_alignment?>'>");
+					//$("#resultList").append("<div class='separator-text' align='<?php echo $interface_direction_alignment?>'>"+ languageNameArray[j]+"</div>");
+					$("#resultList").append("<hr class='separator' align='<?php echo $interface_direction_alignment?>'>");
 
-						// $("#resultList").append("<button class='collapsibleexpand1'></button>");
-						// $("#resultList").append("<div class='content1'>");
-						$("#resultList").append($(languageArray[j]));
-						// $("#resultList").append("</div>");
+					// 	// $("#resultList").append("<button class='collapsibleexpand1'></button>");
+					// 	// $("#resultList").append("<div class='content1'>");
+					$("#resultList").append($(languageArray[j]));
+					// 	// $("#resultList").append("</div>");
 					}
+					
 				}
 				else
 				{
@@ -943,7 +927,10 @@
 								</div>
 							</div>
 
-							<div id='translatedResultsValues' class='translatedResultsValues'><div ID='resultList'></div></div>
+							<div id='translatedResultsValues' class='translatedResultsValues'>
+								<div id='resultList'>
+								</div>
+							</div>
 							<div class='pagination'>
 								<div class='previous left'><a href=''></a></div>
 								<div class='next right'><a href=''></a></div>

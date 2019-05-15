@@ -103,6 +103,26 @@
 	width: 430px;
 }
 
+.rtl .resultList{
+	float: right;
+}
+
+.rtl.box1 .resultList{
+	width: 930px;
+}
+
+.rtl.box2 .resultList{
+	width: 430px;
+}
+
+.rtl.box3 .resultList{
+	width: 430px;
+}
+
+.rtl.box4 .resultList{
+	width: 430px;
+}
+
 .rtl.box1 .resultlistitem{
 	width: 930px;
 }
