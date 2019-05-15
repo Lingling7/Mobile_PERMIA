@@ -1,0 +1,847 @@
+/*GENERAL*/
+
+body{
+	font-family: arial,sans-serif;
+	font-size: 25px;/* small */
+	background: #eee;
+}
+
+a img{
+	border:none;
+}
+
+.container{
+	width: 100%;/*950px*/
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+/*checkin page input option select font*/
+input, textarea, select, button {
+	text-rendering: auto;
+	color: initial;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: start;
+	margin: 0em;
+	font: 400 33px system-ui;
+}
+/*table line distance*/
+tr.spaceUnder>td {
+	padding-bottom: 1em;
+	margin-top: 0; 
+	margin-bottom:0px;
+}
+
+/*collapse interface*/
+
+.collapsibleexpand1 {
+	background-color:  #4CAF50;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 40%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 33px;
+	width: 100%;
+}
+
+.active, .collapsibleexpand1:hover {
+	background-color: #555;
+}
+
+.collapsibleexpand1:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+.collapsibleexpand2 {
+	background-color:  #4CAF50;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 40%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 33px;
+	width: 100%;
+}
+
+.active, .collapsibleexpand2:hover {
+	background-color: #555;
+}
+
+.collapsibleexpand2:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.collapsibleexpand3 {
+	background-color:  #4CAF50;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 40%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 33px;
+	width: 100%;
+}
+
+.active, .collapsibleexpand3:hover {
+	background-color: #555;
+}
+
+.collapsibleexpand3:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+.collapsibleexpand4 {
+	background-color:  #4CAF50;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 40%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 33px;
+	width: 100%;
+}
+
+.active, .collapsibleexpand4:hover {
+	background-color: #555;
+}
+
+.collapsibleexpand4:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+.active:after {
+	content: "\2212";
+}
+
+.content {
+	padding: 0 1px;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: #f1f1f1;
+}
+
+/*.collapsibleexpand {
+	background-color:  #4CAF50;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 40%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 33px;
+	width: 100%;
+}
+
+.active, .collapsibleexpand:hover {
+	background-color: #555;
+}
+
+.collapsibleexpand:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.active:after {
+	content: "\2212";
+}
+
+.content {
+	padding: 0 1px;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: #f1f1f1;
+}*/
+/*.collapsibleexpand2 {
+	background-color:  #4CAF50;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 40%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 33px;
+	width: 100%;
+}
+
+.active2, .collapsibleexpand2:hover {
+	background-color: #555;
+}
+
+.collapsibleexpand2:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.active2:after {
+	content: "\2212";
+}
+.content2 {
+	padding: 0 1px;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: #f1f1f1;
+}
+
+.collapsibleexpand3 {
+	background-color:  #4CAF50;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 40%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 33px;
+	width: 100%;
+}
+
+.active3, .collapsibleexpand3:hover {
+	background-color: #555;
+}
+
+.collapsibleexpand3:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+.active3:after {
+	content: "\2212";
+}
+.content3 {
+	padding: 0 1px;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: #f1f1f1;
+}
+
+.collapsibleexpand4 {
+	background-color:  #4CAF50;
+	color: white;
+	cursor: pointer;
+	padding: 18px;
+	width: 40%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 33px;
+	width: 100%;
+}
+
+.active4, .collapsibleexpand4:hover {
+	background-color: #555;
+}
+
+.collapsibleexpand4:after {
+	content: '\002B';
+	color: white;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.active4:after {
+	content: "\2212";
+}
+
+.content4 {
+	padding: 0 1px;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	background-color: #f1f1f1;
+}*/
+
+
+
+/*tabbed interface*/
+/* Style the tab */
+.tab {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	width: 100%;/*950px*/
+	background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 33px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	background-color: #4CAF50;
+}
+
+/* Style the tab content */
+.tabcontent {
+	display: none;
+	width:100%;/*950px*/
+	padding: 1px 0px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+input[type=text] {
+	padding:1px;
+	border:2px
+	solid #999;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	height: 40px;
+	font-size: 1em;
+}
+input[type=studyId] {
+	padding:1px;
+	border:2px
+	solid #999;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	height: 40px;
+	font-size: 1em;
+}
+
+input[type=password] {
+	padding:1px;
+	border:2px
+	solid #999;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	height: 40px;
+	font-size: 1em;
+}
+
+input[type=select] {
+	height: 40px;
+	font-size:1em;
+}
+
+input[type=text]:focus{
+	border-color:#333;
+}
+
+input[type=submit]{
+	padding:1px 1px;
+	background:#00cc00;
+	border:0 none transparent;
+	cursor:pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 33px;
+	color: black;
+	-webkit-user-select: none;
+	height: 40px;
+}
+
+input[type=button]:hover{
+	border-color: #000;
+}
+
+#options {
+	display: inline-block;
+	height: 40px;
+
+}
+
+#options.hidden{
+	display: none;
+}
+
+label.css-radio-label {
+	padding:5px 20px;
+	background:#888888;
+	border-width:2px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	cursor:pointer;
+	font-size: 33px;/*medium*/
+	color: #fff;
+	height: 40px;
+	margin: 2px;
+}
+
+input[type=radio].css-radio {
+	position:absolute;
+	top:-50px;
+}
+
+input[type=radio].css-radio:checked + label.css-radio-label {
+	background-color:#00cc00;
+	color:#ffffff;
+}
+
+input[type=radio].css-radio2 {
+	display: none;
+}
+
+input[type=radio].css-radio2 + label.css-radio2-label {
+	padding-left:26px;
+	height:21px;
+	display:inline-block;
+	line-height:21px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:medium;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=radio].css-radio2.hidden + label.css-radio2-label.hidden {
+	display: none;
+}
+
+input[type=radio].css-radio2:checked + label.css-radio2-label {
+	background-position: 0 -21px;
+}
+label.css-radio2-label {
+	margin-left: 10px;
+	background-image: url(radio2.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input[type=checkbox].css-checkbox {
+	display:none;
+}
+
+input[type=checkbox].css-checkbox + label.css-checkbox-label {
+	padding-left:20px;/*29*/
+	height:25px;
+	display:inline-block;
+	line-height:30px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size: 30px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-checkbox-label {
+	background-position: 0 -20px;/*-30*/
+}
+
+label.css-checkbox-label
+{
+	background-image:url(checkbox.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin-left: 10px;
+}
+
+.whitecontainer{
+	background-color: #fff;
+	width: 700px;
+	margin: auto;
+	padding: 20px;
+	padding-bottom: 50px;
+	border-width:2px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.hidden{
+	display: none;
+}
+
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.error{
+	font-size: small;
+	color: #4DB1C0;
+}
+
+.interfaceRow{
+	clear: both;
+}
+
+.image{
+	width: 20%;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.interfacefeedbackoption{
+	width: 20%;
+	float: left;
+}
+
+.interfacefeedback{
+	width: 680px;
+}
+
+.mainContainer{
+	width: 100%;/*950px*/
+	margin: auto;
+}
+
+.interfaceChoice{
+	width: 700px;
+	margin: auto;
+
+}
+
+.interface{
+	float: left;
+	margin: auto;
+	padding: 20px;
+}
+
+
+.topBar{
+	position:fixed !important;
+	top:0 !important;
+	left:0 !important;
+	width:100% !important;
+	height:25px !important;
+	background-color:black !important;
+	font-size: small !important;
+	color: #ffffff !important;
+	z-index:1;
+}
+
+.topLink{
+	padding: 5px;
+	color: #eee;
+}
+
+.topLink a{
+	padding: 5px;
+	color: #eeeeee;
+	text-decoration: none;
+}
+
+.topLink a:hover{
+	background-color: #333;
+}
+
+.topContainer{
+	width: 100%;/*950px*/
+	margin: auto;
+}
+
+.topText{
+	width: 700px;
+	text-align: center;
+	font-size: x-large;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	margin: auto;
+	cursor: default;
+}
+
+
+.smallText{
+	padding: 5px;
+	padding-top: 10px;
+	font-size: small;
+}
+
+.login{
+	width: 400px;
+	margin: auto;
+}
+
+.questionnaire{
+	font-size: 33px;
+	width: 680px;
+	margin: auto;
+}
+
+
+
+.interfaceName{
+	margin-left: 10px;
+	cursor: default;
+}
+
+.instruction{
+	font-size: 33px;
+	cursor: default;
+}
+
+.permia{
+	font-size: large;
+	padding-top: 3px;
+	cursor: default;
+}
+
+.centerText{
+	text-align: center;
+}
+
+.left-indent{
+	padding-left: 10px;
+}
+
+.headerContainer{
+	background-color:#eee;
+	margin-top: 60px;
+	padding: 5px;
+	height: 85px;
+	font-size: 33px;/*large*/
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+.separator{
+	clear:left;
+	background-color: rgba(0,0,0,0.07);
+	border-width: 0;
+	color: rgba(0,0,0,0.07);
+	height: 1px;
+	width: 700px;
+	margin-top: 3px;
+}
+
+.separator-text{
+	clear: left;
+	color: #808080;
+	margin-top: 15px;
+	margin-bottom: 0px;
+	font-size: 30px;
+	float: left;   /* add this line due to changes after debug panel interface*/
+}
+
+.separator-text-top{
+	margin-bottom: 0px;
+	font-size: 33px;
+	color: #808080;
+}
+
+.separator-text-bottom{
+	margin-bottom: 10px;
+	font-size: small;
+}
+
+.separator-dynamic{
+	background-color: rgba(0,0,0,0.07);
+	border-width: 0;
+	color: rgba(0,0,0,0.07);
+	height: 1px;
+	width: 700px;
+}
+
+.separator-dynamic-text{
+	color: #808080;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	font-size: small;
+}
+
+.separator-dynamic-text-top{
+	padding-bottom: 5px;
+	font-size: 33px;
+	color: #808080;
+}
+
+.separator-dynamic-top{
+	padding-top: 10px;
+	font-size: small;
+}
+
+.more-results{
+	padding-top: 10px;
+	padding-bottom: 0px;
+	font-size: 33px;
+}
+
+.more-results a{
+	text-decoration: none;
+}
+
+.more-results a:hover{
+	text-decoration: underline;
+}
+
+.extra-results{
+	background-color: #fff !important;
+	max-width: 700px;
+	width: 700px;
+}
+
+textarea {
+	padding:5px;
+	border:2px
+	solid #999;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 1em;
+}
+
+#finish {
+	text-decoration: none;
+	padding:6px 10px;
+	background:#fdd05e;
+	border:0 none transparent;
+	cursor:pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-size: 33px;
+	color: black;
+	-webkit-user-select: none;
+	/*max-height: 33px;*/
+	float: right;
+}
+
+.panelresultlistitem{
+	padding-top: 5px;
+	padding-bottom: 0px;
+	max-width: 520px;
+	word-wrap: break-word;
+	clear: left;
+	min-height: 9em; /* fix width for this block of code 2 title + 1 url + 3 snippet*/
+	max-height: 9em;
+}
+.panelresultlistitem a{
+	text-decoration: none;
+	font-size: 125%;
+}
+
+.resultlistitem{
+	padding-top: 5px;
+	padding-bottom: 0px;
+	max-width: 520px;
+	word-wrap: break-word;
+	clear: left;
+}
+
+/* for the panel interface when more than two languages chosen */
+.panelTitle {
+	clear: left;
+	line-height:1.5em;
+	overflow: hidden;
+	text-decoration: none;
+	max-height:3em;
+	/*min-height:3em;*/
+}
+
+/*for other interface other than panel, and also for panel interface when just one language chosen*/
+.generalTitle{
+	clear: left;
+	line-height:1.5em;
+	max-height: 1.5em;
+	text-decoration: none;
+	/*overflow: hidden;*/
+
+}
+
+.panelSnippet {
+	clear: left;
+	line-height:1.5em;
+	height: 4.5em;
+	overflow: hidden;
+
+}
+
+.generalSnippet{
+	clear: left;
+	line-height:1.5em;
+	height: 3.0em;
+	overflow: hidden;
+
+}
+
+.taskDisplay{
+	margin-top: 1px;
+	display: block;
+	height: 70px;
+	font-size: 33px;
+	width: auto;
+}
+.practiceTaskDisplay{
+	padding-bottom: 5px;
+	color: red;
+	font-size: 33px;
+}
+
+/*.resultlistitem {
+	 width: 100%;
+	 max-width: 100%;
+	 margin: 0 auto;
+}*/
+
+.panelTitleWidth{
+	width: 80%;
+	float: left;
+}
+.generalTitleWidth{
+	width: 89%;
+	float: left;
+}
+.favButton {
+	width: auto;
+}

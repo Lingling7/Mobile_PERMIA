@@ -1,0 +1,136 @@
+/* RESULT PAGE HEADER */
+
+.headerContainerhidden{ /*if options are hidden, currently not used*/
+	background-color:#eee;
+	margin-top: 60px;
+
+	padding: 5px;
+	height: 30px;
+	font-size: large;
+	margin-left: auto;
+	margin-right: auto;
+	float: right;
+}
+
+.headerContainernothidden{
+	background-color:#eee;
+	margin-top: 40px;
+
+	padding: 5px;
+	height: 30px;
+	font-size: large;
+	margin-left: auto;
+	margin-right: auto;
+	float: right;
+	
+	padding-right: 20px;
+}
+
+.resultContainerhidden{ /*if options are hidden, currently not used*/
+	margin-top: 10px;
+	border: 2px;
+	width: 950px;
+	overflow:hidden;
+	float: right;
+}
+
+.resultContainernothidden{
+	margin-top: 60px;
+	border: 2px;
+	width: 950px;
+	overflow:hidden;
+	float: right;
+	direction:rtl;
+}
+
+.headerContainernothidden input{
+	direction:rtl;
+	float: right;
+	margin-left: 5px;
+}
+
+label.css-radio2-label{
+	float: right;
+	margin-top:5px;
+	margin-right: 5px;
+}
+
+label.css-checkbox-label{
+	float: right;
+}
+
+label.css-radio-label{
+	float: right;
+	height: 18px;
+}
+
+#options{
+	float: right;
+}
+
+.header2{ /* for interleaved interface */
+	font-size: medium;
+	font-weight:bold;
+	display: inline;
+	float: right;
+	padding-bottom: 0px;
+}
+
+.header2 div{
+	float: right;
+}
+
+.header2 .editSubmit{
+	clear: both;
+}
+
+.header .recommender{
+	float: right;
+}
+
+
+/* side-bar */
+.recommender{
+	width: 200px !important;
+	min-height: 100px !important;
+	padding: 10px !important;
+	margin: 10px !important;
+	vertical-align: top !important;
+	float: left !important;
+	background: #fff !important;
+	-webkit-border-radius: 5px !important;
+	border-radius: 5px !important;
+	clear: left !important;
+
+}
+
+.recommender.checked{
+	width: 670px !important;
+	min-height: 350px !important;
+	padding: 10px !important;
+	margin: 10px !important;
+	vertical-align: top !important;
+	float: right !important;
+	background: #fff !important;
+	-webkit-border-radius: 5px !important;
+	border-radius: 5px !important;
+	clear: right !important;
+	/*position: absolute;*/
+}
+
+/* panels */
+.box1{
+	float: right !important;
+}
+
+.box2{
+	float: right !important;
+}
+
+.box3{
+	float: right !important;
+}
+
+.box4{
+	float: right !important;
+}
