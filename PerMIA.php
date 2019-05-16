@@ -1188,6 +1188,7 @@ if($_SESSION['interface']=='tabbed')
 					?>
 			  </td>
 			  </tr> </table>
+			  
 				<form>
 					<div class='inputBoxes'>
 					<input type="hidden" name="interface" value="<?php echo $_SESSION['interface']?>">

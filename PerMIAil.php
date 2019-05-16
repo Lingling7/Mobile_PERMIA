@@ -841,6 +841,7 @@
 						echo htmlspecialchars("Find documents that describe or discuss the impact of consumer boycotts.");
 					}
 					echo "</span>";
+
 					echo "<span class=taskDisplay>";
 					echo "<u>";
 					if($Language2Description){
@@ -873,6 +874,7 @@
 					?>
 				</td>
 				</tr> </table>
+				
 				<form>
 					<div class='inputBoxes'>
 					<input type="hidden" name="interface" value="<?php echo $_SESSION['interface']?>">

@@ -133,7 +133,7 @@
 	        
 	        
 
-			        echo('<div ID="resultList">');
+			        echo('<div id="resultList">');
 		            if ($_SESSION["interface"] == "panel" && $_SESSION[number_of_boxes] > 1) 
 		            {
 								$resultListItem = "panelresultlistitem";
@@ -195,13 +195,13 @@
 									echo '<button class="collapsibleexpand active">'.'English'.'</button>';
 									echo '<div class="content">';
 								}elseif ($_REQUEST["market"]=='zh-CN') {
-									echo '<button class="collapsibleexpand active">'.'中文'.'</button>';
+									echo '<button class="collapsibleexpand">'.'中文'.'</button>';
 									echo '<div class="content">';
 								}elseif ($_REQUEST["market"]=='zh-HK') {
-									echo '<button class="collapsibleexpand active">'.'粵語'.'</button>';
+									echo '<button class="collapsibleexpand">'.'粵語'.'</button>';
 									echo '<div class="content">';
 								}elseif ($_REQUEST["market"]=='es-ES') {
-									echo '<button class="collapsibleexpand active">'.'Español'.'</button>';
+									echo '<button class="collapsibleexpand">'.'Español'.'</button>';
 									echo '<div class="content">';
 								}
 								// echo "<br>";
@@ -282,7 +282,7 @@
 			}
 		?>
 		<script>//collapseAll Interface
-		    var coll = document.getElementsByClassName("collapsibleexpand");
+		   /* var coll = document.getElementsByClassName("collapsibleexpand");
 		    var i;
 
 		    for (i = 0; i < coll.length; i++) {
@@ -299,7 +299,32 @@
 		        // coll[i].classList.toggle("active");
 		        coll[i].nextElementSibling.style.maxHeight = "2100px";//show 6 news
 		        
+		    }*/var coll2 = document.getElementsByClassName("collapsibleexpand");
+		    var i2;
+
+		    for (i2 = 0; i2 < coll2.length; i2++) {
+		    	
+		        coll2[i2].classList.toggle("active");
+		        coll2[i2].nextElementSibling.style.maxHeight = "2100px";//show 6 news
 		    }
+	    $(document).ready(function(){
+
+		    $( ".collapsibleexpand" ).on('click',function() {
+		    	
+                    this.classList.toggle("active");
+		            var content = this.nextElementSibling;
+		            if (content.style.maxHeight){
+		                content.style.maxHeight = null;
+		            } else {
+		                content.style.maxHeight = content.scrollHeight + "px";
+		            }
+		        coll[i].classList.toggle("active");
+		        coll[i].nextElementSibling.style.maxHeight = "2100px";//show 6 news
+		    });
+		   
+		});
+
+
 		</script>
 		
 	</body>
