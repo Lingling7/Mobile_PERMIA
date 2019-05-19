@@ -221,21 +221,33 @@
 									echo"</td>";
 
 									echo"<td>";
-										echo('<div class= " '. $resultListItem . ' " rank="rank' . $i . '" language="'. $_REQUEST["market"] .'">');
-											echo('<div class= " ' . $title . ' ">');
-												echo ('<a class="fancybox fancybox.iframe '  . $titleWidth . ' ' . $randomNumber . '" href="' . $finalURL . '">');
-												echo(strip_tags($value->name));
-												echo('</a>');
-
-												echo('<a href="javascript:;" style="color:#FBC02D; font-size:90%; float:right;" class="favButton">Relevant</a>');
-											echo('</div>');
-												echo('<div class=\'url\'>' . urldecode($value->provider[0]->name));
-												$news_date = urldecode($value->datePublished);
-												$news_date = Date_Difference::getStringResolved($news_date, $_REQUEST["market"]);
-												echo(' - ' . $news_date  . '</div>');
-
-												echo('<div class=" '. $snippet .' ">' . strip_tags($value->description) . '</div>');
+									echo('<div class= " '. $resultListItem . ' " rank="rank' . $i . '" language="'. $_REQUEST["market"] .'">');
 											
+										echo "<table>";
+										echo"<tr>";
+											echo"<td>";
+													echo('<div class= " ' . $title . ' ">');
+														echo ('<a class="fancybox fancybox.iframe '  . $titleWidth . ' ' . $randomNumber . '" href="' . $finalURL . '">');
+														echo(strip_tags($value->name));
+														echo('</a>');			
+													echo('</div>');
+											echo"</td>";
+											echo"<td>";
+													echo('<a href="javascript:;" style="color:#FBC02D; font-size:100%; float:right;" class="favButton">Relevant</a>');
+											echo"</td>";
+										echo"</tr>";
+										echo"<tr>";
+											echo"<td>";
+													echo('<div class=\'url\'>' . urldecode($value->provider[0]->name));
+													$news_date = urldecode($value->datePublished);
+													$news_date = Date_Difference::getStringResolved($news_date, $_REQUEST["market"]);
+													echo(' - ' . $news_date  . '</div>');
+
+													echo('<div class=" '. $snippet .' ">' . strip_tags($value->description) . '</div>');
+											echo"</td>";	
+											
+										echo"</tr>";
+										echo "</table>";
 										echo('</div>');
 									echo"</td>";
 

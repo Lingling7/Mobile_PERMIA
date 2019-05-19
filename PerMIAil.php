@@ -525,12 +525,11 @@
 					for( j=0 ; j< <?php echo $number_of_languages?> ; j++)
 					{//split different languages
 					//$("#resultList").append("<div class='separator-text' align='<?php echo $interface_direction_alignment?>'>"+ languageNameArray[j]+"</div>");
+					//$("#resultList").append("<hr class='separator' align='<?php echo $interface_direction_alignment?>'>");
+					$("#resultList").append($(languageArray[j]));
 					$("#resultList").append("<hr class='separator' align='<?php echo $interface_direction_alignment?>'>");
 
-					// 	// $("#resultList").append("<button class='collapsibleexpand1'></button>");
-					// 	// $("#resultList").append("<div class='content1'>");
-					$("#resultList").append($(languageArray[j]));
-					// 	// $("#resultList").append("</div>");
+
 					}
 					
 				}
@@ -841,7 +840,7 @@
 						echo htmlspecialchars("Find documents that describe or discuss the impact of consumer boycotts.");
 					}
 					echo "</span>";
-
+					// echo "<br/>";
 					echo "<span class=taskDisplay>";
 					echo "<u>";
 					if($Language2Description){
@@ -881,7 +880,7 @@
 					<input type="text" style="width:500px;" id="searchText" name="searchText" value="<?php echo htmlspecialchars($text,ENT_QUOTES)?>">
 					<input type="submit" id='submitbutton' value="<?php if($localised['Search']) {echo $localised['Search'];} else { echo "Search";}?>" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
-					<br/><br/>
+					<br/><!-- <br/> -->
 
 					<div id='options' class='<?php echo $option_display;?>'>
 				<?php

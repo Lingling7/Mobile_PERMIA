@@ -1156,6 +1156,7 @@ if($_SESSION['interface']=='tabbed')
 							echo htmlspecialchars("Find documents that describe or discuss the impact of consumer boycotts.");
 						}
 						echo "</span>";
+						echo "<br/>";
 						echo "<span class=taskDisplay>";
 						echo "<u>";
 						if($Language2Description){
